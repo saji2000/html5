@@ -21,12 +21,47 @@
                 <input type="text" name="Full Name" size="20">
             </p>
             <p>
-                Subject:
-                <input type="text" name="Subject" size="30">
+                <label>
+                    Subject:
+                    <input type="text" name="Subject" size="30">
+                </label>
             </p>
             <p>
                 Feedback:
-                <input type="text" name="Feedbacl" size="50">
+                <textarea name="feedback" cols="30" rows="10"></textarea>
+            </p>
+            <p>
+                Department: <br>
+                <label> Management
+                    <input type="checkbox" value="Management">
+                </label>
+                <label> Development
+                    <input type="checkbox" value="Development">
+                </label>
+                <label> Design
+                    <input type="checkbox" value="Design">
+                </label>
+                <label> Finance
+                    <input type="checkbox" value="Finance">
+                </label>
+            </p>
+            <p>
+                <label>
+                    Rate our service:
+                    <Select name="rating">
+                        <option>10</option>
+                        <option>9</option>
+                        <option>8</option>
+                        <option>7</option>
+                        <option>6</option>
+                        <option>5</option>
+                        <option>4</option>
+                        <option>3</option>
+                        <option>2</option>
+                        <option>1</option>
+
+                    </Select>
+                </label>
             </p>
             <p>
                 <input type="submit" value="Submit">
