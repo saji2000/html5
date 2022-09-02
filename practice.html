@@ -7,12 +7,19 @@
     <head>
         <meta charset="UTF-8" />
         <title>Table</title>
+
+        <!-- SEO -->
+        <meta name="keywords" content="feedback, design, development, website">
+        <meta name="description" content="This is a feebakc form webpage">
+
     </head>
 
     <body>
         <h1>Feedback form</h1>
 
         <p>fill out the following feedback form</p>
+
+        <p><a href="#rating">Rating</a></p>
 
         <form method="post" action="http://www.deitel.com">
             <input type="hidden" name="subject">
@@ -45,7 +52,7 @@
                     <input type="checkbox" value="Finance">
                 </label>
             </p>
-            <p>
+            <p id="rating">
                 <label>
                     Rate our service:
                     <Select name="rating">
