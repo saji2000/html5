@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Color input form</title>
+        <title>Different input form</title>
     </head>
 
     <body>
@@ -11,43 +11,56 @@
 
         <p>Different placeholders, input types and autofocus attributes</p>
 
-        <p>
-            <label>
-                Color: 
-                <input type="color" autofocus/>
-                (Hexadecimal codes)
-            </label>
-        </p>
+        <form method="post"  autocomplete="on">
 
-        <p>
-            <label>
-                Date: 
-                <input type="date">
-            </label>
-        </p>
+            <p>
+                <label>
+                    Full Name: 
+                    <input type="text" id="fullname" name="fullname">
+                </label>
+            </p>
 
-        <p>
-            <label>
-                Date time: 
-                <input type="datetime">
-                (yyyy-mm-ddThh:mm+ff:gg)
-            </label>
-        </p>
+            <p>
+                <label>
+                    Color: 
+                    <input type="color" autofocus/>
+                    (Hexadecimal codes)
+                </label>
+            </p>
 
-        <p>
-            <label>
-                Number: 
-                <input type="number" min="0" max="10">
-                (0-10)
-            </label>
-        </p>
+            <p>
+                <label>
+                    Date: 
+                    <input type="date">
+                </label>
+            </p>
 
-        <p>
-            <label>
-                Phone number: 
-                <input type="tel" placeholders="(###) ###-####" pattern="\(\d{3}) + \d{3}-\d{4}">
-            </label>
-        </p>
+            <p>
+                <label>
+                    Date time: 
+                    <input type="datetime">
+                    (yyyy-mm-ddThh:mm+ff:gg)
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Number: 
+                    <input type="number" min="0" max="10">
+                    (0-10)
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Phone number: 
+                    <input type="tel" placeholders="(###) ###-####" pattern="\(\d{3}) + \d{3}-\d{4}">
+                </label>
+            </p>
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
     </body>
 
 </html>
