@@ -1,0 +1,6 @@
+p {font-weight: bold; position: relative; top: -1ex;}
+h1 {font-family: helvetica, arial, sans-serif; color: red}
+a {text-decoration: none; position: relative; top: +1ex}
+a:hover {text-decoration:underline}
+li em {font-style:italic}
+.special {color: purple}
