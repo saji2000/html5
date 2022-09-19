@@ -3,5 +3,5 @@ h1 {font-family: helvetica, arial, sans-serif; color: red}
 a {text-decoration: none; position: relative; top: +1ex}
 a:hover {text-decoration:underline}
 li em {font-style:italic}
-img {object-position: center right; width: 100px; height: 100px}
+img {width: 100px; height: 100px}
 .special {background-color: lightgray}
