@@ -1,5 +1,5 @@
-div {text-align: center; width: 50%; position: relative; left:25%; border-width: 6px}
+div {text-align: center; width: 50%; position: relative; left:25%; border-width: 6px; padding: 10px}
 #ex1 {border-width: solid;}
-#ex2 {border-style: dotted;}
-#ex3 {border-color: blue;}
+#ex2 {border-style: dotted; margin-top: .5em}
+#ex3 {border-color: blue; margin: 20px}
 
