@@ -1,7 +1,4 @@
-p {font-weight: bold; position: relative; top: -1ex;}
-h1 {font-family: helvetica, arial, sans-serif; color: red}
-a {text-decoration: none; position: relative; top: +1ex}
-a:hover {text-decoration:underline}
-li em {font-style:italic}
-img {width: 100px; height: 100px}
-.special {background-color: lightgray}
+#ex1 {font-weight: bold; width: 20%;}
+#ex2 {font-weight: bold; width: 80%; text-align: center}
+#ex3 {font-weight: bold; width: 5%; height: 30px; overflow:scroll}
+
