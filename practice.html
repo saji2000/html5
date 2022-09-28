@@ -9,11 +9,15 @@
 
         <script type="text/javascript">
 
-            var name;
+            var firstNum;
+            var secondNum;
 
-            name = window.prompt("please enter your name:\n");
+            firstNum = window.prompt("please the first digit:\n");
+            secondNum = window.prompt("please the second digit:\n");
 
-            document.writeln("<h1>Hello " + name + " Welcome to JavaScript!</h1>");
+            var sum =parseInt(firstNum) + parseInt(secondNum);
+
+            document.writeln("<h1>" + firstNum + " + " + secondNum + " = " + sum + "</h1>");
 
         </script>
 
