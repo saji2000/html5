@@ -9,12 +9,12 @@
 
         <script type="text/javascript">
 
-            var counter = 1;
-            while (counter < 5){
-                document.writeln("<p style = 'font-size:"
-                + counter + "ex'>HTML5 font size " + counter + "ex</p>");
-                ++counter;
+            var counter = 0;
+            for(var i = 2; i <= 1000; i += 2){
+                counter += i;
             }
+
+            document.writeln("Sum of the even numbers from 1 to 1000 is " + counter);
 
         </script>
 
