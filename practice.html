@@ -9,21 +9,12 @@
 
         <script type="text/javascript">
 
-            var counter;
-            var num;
-            var avg;
-            var total = 0;
-            counter = parseInt(window.prompt("How many numbers you want to add: ", "0"));
-            console.log(counter);
-            for (var i = 0; i < counter; i++) {
-                num = parseInt(window.prompt("Enter your number: ", "0"));
-                console.log(num);
-                total = total + num;
+            var counter = 1;
+            while (counter < 5){
+                document.writeln("<p style = 'font-size:"
+                + counter + "ex'>HTML5 font size " + counter + "ex</p>");
+                ++counter;
             }
-
-            avg = total/counter;
-
-            document.writeln("<h1> Class Average is " + avg + "</h1>");
 
         </script>
 
