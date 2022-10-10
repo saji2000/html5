@@ -11,12 +11,12 @@
             
             for(var count = 1; count <= 10; ++count){
                 if(count == 5){
-                    break;
+                    continue;
                 }
                 document.writeln(count + " ");
             }
 
-            document.writeln("<p>Broke out of loop at count = " + count + "</p>");
+            document.writeln("<p>Used continue to skip printing 5</p>");
 
         </script>
 
