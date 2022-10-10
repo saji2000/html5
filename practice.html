@@ -8,13 +8,29 @@
         <link rel="stylesheet" href="style.css" type="text/css">
 
         <script type="text/javascript">
+            var amount;
+            var principal = 1000.00;
+            var rate = 0.05;
 
-            var counter = 0;
-            for(var i = 2; i <= 1000; i += 2){
-                counter += i;
+            document.writeln("<table>");
+            document.writeln("<caption>Calculating Compound Interest</caption>");
+            document.writeln("<thead><tr><th>Year</th>");
+            document.writeln("<th>Amound on deposit</th>");
+            document.writeln("</tr></thead><tbody>");
+            for(var year = 1; year <= 10; ++year){
+                amount = principal * Math.pow(1.0 + rate, year);
+
+                if(year % 2 !== 0){
+                    document.writeln("<tr class='oddrow'><td>"
+                        + year + "</td><td>" + amount.toFixed(2) + "</td></tr></tbody>");                    
+                }
+                else{
+                    document.writeln("<tr><td>"
+                        + year + "</td><td>" + amount.toFixed(2) + "</td></tr></tbody>");
+                }
             }
 
-            document.writeln("Sum of the even numbers from 1 to 1000 is " + counter);
+            document.writeln("</tbody></table>");
 
         </script>
 
