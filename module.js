@@ -1,15 +1,20 @@
-// var value;
+var output = "";
 
-// document.writeln("<p>Random numbers</p><ol>");
+function calculateFactorials(){
+    for(var i=0; i <= 10; ++i){
+        output += "<p>" + i + "! = " + factorial(i) + "</p>";
 
-// for (var i = 1; i <= 30; ++i){
+        document.getElementById("results").innerHTML = output;
+    }
+}
 
-//     value = Math.floor(1 + Math.random() * 6);
-
-//     document.writeln("<li>" + value + "</li>");
-
-// }
-
-// document.writeln("</ol>");
-
+function factorial(n){
+    if(n <= 1){
+        return 1;
+    }
+    else{
+        return n * factorial(n - 1);
+    }
+}
+window.addEventListener("load", calculateFactorials, false);
 
