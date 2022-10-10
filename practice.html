@@ -8,29 +8,45 @@
         <link rel="stylesheet" href="style.css" type="text/css">
 
         <script type="text/javascript">
-            var amount;
-            var principal = 1000.00;
-            var rate = 0.05;
+            
+            var choice;
+            var startTag;
+            var endTag;
+            var validInput = true;
+            var listType;
 
-            document.writeln("<table>");
-            document.writeln("<caption>Calculating Compound Interest</caption>");
-            document.writeln("<thead><tr><th>Year</th>");
-            document.writeln("<th>Amound on deposit</th>");
-            document.writeln("</tr></thead><tbody>");
-            for(var year = 1; year <= 10; ++year){
-                amount = principal * Math.pow(1.0 + rate, year);
+            choice = window.prompt("Select a style:\n" + "1 (numbered)" + " 2 (lettered)", "1");
 
-                if(year % 2 !== 0){
-                    document.writeln("<tr class='oddrow'><td>"
-                        + year + "</td><td>" + amount.toFixed(2) + "</td></tr></tbody>");                    
-                }
-                else{
-                    document.writeln("<tr><td>"
-                        + year + "</td><td>" + amount.toFixed(2) + "</td></tr></tbody>");
-                }
+            switch (choice) {
+                case "1":
+                    startTag = "<ol>";
+                    endTag = "</ol>";
+                    listType = "<h1> Numbered List </h1>";
+                    break;
+                
+                case "2": 
+                    startTag = "<ol style = 'list-style-type: upper-alpha'>";
+                    endTag = "</ol>";
+                    listType = "<h1> Lettered List </h1>";
+                    break;
+
+                default:
+                    validInput = false;
+                    break;
             }
 
-            document.writeln("</tbody></table>");
+            if(validInput === true){
+                document.writeln(listType + startTag);
+
+                for (var i = 1; i <= 3; ++i){
+                    document.writeln("<li>List item " + i + "</li>");
+                }
+                document.write;n(endTag);
+
+            }
+            else {
+                    document.writeln("Invalid input: " + choice);
+            }
 
         </script>
 
