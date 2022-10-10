@@ -9,13 +9,14 @@
 
         <script type="text/javascript">
             
-            var counter = 1;
-
-            do {
-                document.writeln("<h" + counter + "> Level h" + counter + " heading");
-                counter++;
+            for(var count = 1; count <= 10; ++count){
+                if(count == 5){
+                    break;
+                }
+                document.writeln(count + " ");
             }
-            while (counter < 6);
+
+            document.writeln("<p>Broke out of loop at count = " + count + "</p>");
 
         </script>
 
