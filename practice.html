@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Maple Dating</title>
+<body>
 
-        <link rel="stylesheet" href="style.css" type="text/css">
+<h2>JavaScript addEventListener()</h2>
 
-        <script src = "module.js"></script>
-    </head>
-    <body>
-    </body>
+<p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+<button id="myBtn">Try it</button>
+
+<script>
+document.getElementById("myBtn").addEventListener("click", function() {
+  var word = window.prompt("Hello World!");
+  document.writeln(word)
+});
+</script>
+
+</body>
 </html>
