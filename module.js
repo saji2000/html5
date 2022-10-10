@@ -1,8 +1,10 @@
-for(var count = 1; count <= 10; ++count){
-    if(count == 6){
-        continue;
-    }
-    document.writeln(count + " ");
+for(var x = 1; x <= 10; ++x){
+    document.writeln("<p>The square of " + x + 
+    " is " + square(x) + "</p>");
 }
 
-document.writeln("<p>Used continue to skip printing 5</p>");
+function square(y){
+    return y * y;
+}
+
+
