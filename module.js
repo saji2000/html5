@@ -1,27 +1,27 @@
 function start(){
-    var a = [1, 2, 3, 4, 5];
 
-    outputArray("Original array: ", a, document.getElementById("originalArray"));
-    modifyArray(a);
-    outputArray("Modified array: ", a, document.getElementById("modifiedArray"));
+    var array1 = [[1, 2, 3], [4, 5, 6]];
+    var array2 = [[1, 2], [3], [4, 5, 6]];
 
-    document.getElementById("originalElement").innerHTML = document.getElementById("modifiedElement").innerHTML = 
-    "a[3] after modifyElement: " + a[3];
+    outputArray("Values in array1 by row", array1, document.getElementById("output1"));
+    outputArray("Values in array2 by row", array2, document.getElementById("output2"));
+
 }
 
 function outputArray(heading, theArray, output){
-    output.innerHTML = heading + theArray.join(" ");
-}
+    var results = "";
 
-function modifyArray(theArray){
-    for(var j in theArray){
-        theArray[j] *= 2;
+    for (var row in theArray) {
+        results += "<ol>";
+
+        for (var column in theArray[row]){
+            results += "<li>" + theArray[row][column] + "</li>";
+        }
+
+        results += "</ol>";
     }
-}
 
-function modifyElement(e){
-    e *= 2;
-    document.getElementById("inModifyElement").innerHTML = "value in modifyElement: " + e;
+    output.innerHTML = results;
 }
 
 window.addEventListener("load", start, false);
