@@ -12,7 +12,7 @@ function outputArray(heading, theArray, output){
     var results = "";
 
     for (var row in theArray) {
-        results += "<ol>";
+        results += "<ol >";
 
         for (var column in theArray[row]){
             results += "<li>" + theArray[row][column] + "</li>";
