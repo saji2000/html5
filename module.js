@@ -1,36 +1,27 @@
 function start(){
+    var a = [1, 2, 3, 4, 5];
 
-    var n1 = new Array(5);
-    var n2 = new Array();
-    var n3 = new Array("me", "you", "us");
+    outputArray("Original array: ", a, document.getElementById("originalArray"));
+    modifyArray(a);
+    outputArray("Modified array: ", a, document.getElementById("modifiedArray"));
 
-    var length = n1.length;
-
-    for (var i = 0; i < length; ++i){
-        n1[i] = i;
-    }
-
-    for (var i = 0; i < 10; ++i){
-        n2[i] = i;
-    }
-
-    outputArray("Array n1:", n1, document.getElementById("output1"));
-    outputArray("Array n2:", n2, document.getElementById("output2"));
-    outputArray("Array n3:", n3, document.getElementById("output3"));
+    document.getElementById("originalElement").innerHTML = document.getElementById("modifiedElement").innerHTML = 
+    "a[3] after modifyElement: " + a[3];
 }
 
 function outputArray(heading, theArray, output){
-    var length = theArray.length;
+    output.innerHTML = heading + theArray.join(" ");
+}
 
-    var content = "<h2>" + heading + "</h2><table><thead><th>Index</th><th>Value</th></thead><tbody>";
-    
-    for (var i = 0; i < length; i++) {
-        content += "<tr><td>" + i + "</td><td>" + theArray[i] + "</td></tr>";
+function modifyArray(theArray){
+    for(var j in theArray){
+        theArray[j] *= 2;
     }
+}
 
-    content += "</tbody></table>";
-    output.innerHTML = content;
-
+function modifyElement(e){
+    e *= 2;
+    document.getElementById("inModifyElement").innerHTML = "value in modifyElement: " + e;
 }
 
 window.addEventListener("load", start, false);
