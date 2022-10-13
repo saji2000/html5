@@ -1,6 +1,8 @@
 function start(){
+
     var n1 = new Array(5);
     var n2 = new Array();
+    var n3 = new Array("me", "you", "us");
 
     var length = n1.length;
 
@@ -14,6 +16,7 @@ function start(){
 
     outputArray("Array n1:", n1, document.getElementById("output1"));
     outputArray("Array n2:", n2, document.getElementById("output2"));
+    outputArray("Array n3:", n3, document.getElementById("output3"));
 }
 
 function outputArray(heading, theArray, output){
