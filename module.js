@@ -1,27 +1,24 @@
 function start(){
+    var s = "ZEBRA";
+    var s2 = "AbCdEfG";
+    var result = "";
 
-    var array1 = [[1, 2, 3], [4, 5, 6]];
-    var array2 = [[1, 2], [3], [4, 5, 6]];
+    result = "<p> Character at index 0 in '" + s + "' is " + 
+        s.charAt(0) + "</p>";
 
-    outputArray("Values in array1 by row", array1, document.getElementById("output1"));
-    outputArray("Values in array2 by row", array2, document.getElementById("output2"));
+    result += "<p> Character at index 1 in '" + s + "' is " + 
+        s.charCodeAt(0) + "</p>";
+    
+    result += "<p>'" + String.fromCharCode(87, 79, 82, 68) + 
+        "' contains character codes 87, 79, 82, and 68 </p>";
 
-}
+    result += "<p>'" + s2 + "' in lowercase is '" + 
+        s2.toLowerCase() + "'</p>";
+    
+    result += "<p>'" + s2 + "' in uppercase is '" + 
+        s2.toUpperCase() + "'</p>";
 
-function outputArray(heading, theArray, output){
-    var results = "";
-
-    for (var row in theArray) {
-        results += "<ol type = 'A'>";
-
-        for (var column in theArray[row]){
-            results += "<li>" + theArray[row][column] + "</li>";
-        }
-
-        results += "</ol>";
-    }
-
-    output.innerHTML = results;
+    document.getElementById("results").innerHTML = result;
 }
 
 window.addEventListener("load", start, false);
