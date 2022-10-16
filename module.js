@@ -1,18 +1,22 @@
-function split(){
-    var inputString = document.getElementById("inputField").value;
-    var tokens = inputString.split(" ");
-
-    var results = document.getElementById("results");
-
-    results.innerHTML = "<p>The sentence split into words is: </p>" + 
-    "<p class = 'indent'>" + 
-    tokens.join("</p><p class = 'indet'>") + "</p>" + 
-    "<p>The first 10 characters of the input string are : </p>" + 
-    "<p class = 'indent'>'" +inputString.substring(0, 10) + "'</p>";
-}
-
 function start(){
-    var searchButton = document.getElementById("splitButton");
-    searchButton.addEventListener("click", split, false);
+    var current = new Date();
+
+    document.getElementById("strings").innerHTML = 
+        "<p>toString: " + current.toString() + "</p>" +
+        "<p>toLocaleString: " + current.toLocaleString() + "</p>";
+
+    document.getElementById("getMethods").innerHTML = 
+        "<p>getDate: " + current.getDate() + "</p>" +
+        "<p>getDay: " + current.getDay() + "</p>";
+
+    var anotherDate = new Date(2011, 2, 18, 1, 5, 0 ,0);
+    document.getElementById("newArguments").innerHTML = 
+        "<p>Date: " + anotherDate + "</p>";
+
+    anotherDate.setDate(31);
+    anotherDate.setMonth(11);
+
+    document.getElementById("setMethods").innerHTML = 
+        "<p>Modified date: " + anotherDate + "</p>";
 }
 window.addEventListener("load", start, false);

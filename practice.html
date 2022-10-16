@@ -8,11 +8,25 @@
 
     </head>
     <body>
+        <h1>Favourite Twitter Searches</h1>
+        <p id = "welcomeMessage"></p>
         <form action="#">
-            <p>Enter a sentence to split into words: </p>
-            <input id="inputField" type="text">
-            <input id="splitButton" type="button" value = "Split">
-            <div id="results"></div>
+
+            <p><input id="query" type="text"
+                placeholder="Enter Twitter search query">
+                <a href="https://twitter.com">Twitter search operators</a>
+            </p>
+
+            <p><input id="tag" type="text"
+                placeholder="Tag your query">
+                <input id="saveButton" type="button"
+                value="Save">
+                <input type="button" value = "Clear all saved searches"
+                id = "clearButton">
+            </p>
+
         </form>
+        <h1>Previously tagged searches</h1>
+        <div id = "searches"></div>
     </body>
 </html>

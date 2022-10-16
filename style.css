@@ -1,6 +1,9 @@
-th {background-color: black; color: white}
-tr {background-color:lightgrey; color:black; }
-/* td {position: relative; left: 20px} */
+p {margin: 0px;}
+#welcomeMessage {margin-bottom: 10px; font-weight: bold;}
+input[type = "text"] {width: 250px;}
 
-table {width: 50%; height: 200px; border: 1px solid}
+span {margin-left: 10px; display: inline-block; width: 100px;}
+li {list-style-type: none; width: 220px;}
+
+
 
