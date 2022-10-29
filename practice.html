@@ -8,15 +8,47 @@
 
     </head>
     <body>
-        <h1>An HTML5 Page</h1>
-        <p>This page contains basic HTML5 elements. DOM tree for this documentation
-            includes a DOM node for every element
+        <h1 id = "bigheading" class = "highlighted">
+            [bigheading]DHTML Object Model
+        </h1>
+        <h3 id = "smallheading">
+            [smallheading]Element Functionality
+        </h3>
+        <p id = "para1">
+            [paral]The DOM allows for a quick, dynamic way to access the elements
         </p>
-        <p>An unordered lis</p>
-        <ul>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
+        <p id="para2">
+            [para2]For more information checkout this link
+            <a class="link" href="https://javascript.com">Resources</a>
+        </p>
+        <ul id = "list">
+            <li id = "item1">[item1]getElementById and parentNode</li>
+            <li id = "item2">[item2]insertBefore and appendChild</li>
+            <li id = "item3">[item3]replaceChild and removeChild</li>
         </ul>
+        <div id = "nav" class ="nav">
+            <p>
+                <input type="text" id = "gbi" value="bigheading">
+                <input type="button" value="Get by id" id = "byIdButton">
+            </p>
+            <p>
+                <input type="text" id = "ins">
+                <input type="button" value="Insert before" id = "byIdButton">
+            </p>
+            <p>
+                <input type="text" id = "append">
+                <input type="button" value="Append child" id = "appendButton">
+            </p>
+            <p>
+                <input type="text" id = "replace">
+                <input type="button" value="Replace current" id = "replaceButton">
+            </p>
+            <p>
+                <input type="button" value="Remove current" id = "removeButton">
+            </p>
+            <p>
+                <input type="button" value="Get parent" id = "parentButton">
+            </p>
+        </div>
     </body>
 </html>
