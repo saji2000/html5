@@ -1,15 +1,7 @@
-function processLinks(){
-    var linksList = document.links;
-    var contents = "<ul>";
+function start(){
+    var inputColor = prompt("Enter a color name for the background", "");
+    document.body.setAttribute("style", "background-color: " + inputColor);
 
-    for (var i = 0; i < linksList.length; ++i) {
-        var currentLink = linksList[i];
-        contents += "<li><a href='" + currentLink.href + "'>" + currentLink.innerHTML + "</li>";
-    }
-
-    contents += "</ul>";
-
-    document.getElementById("links").innerHTML = contents;
 }
 
-window.addEventListener("load", processLinks, false);
+window.addEventListener("load", start, false);
