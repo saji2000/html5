@@ -1,44 +1,29 @@
- //initialization function to insert cells into the table
- function createCanvas()
- {
-    var side = 100;
-    var tbody = document.getElementById( "tablebody" );
-   
-    for ( var i = 0; i < side; ++i )
-    {
-       var row = document.createElement( "tr" );
-        
-       for ( var j = 0; j < side; ++j )
-       {
-          var cell = document.createElement( "td" );
-          row.appendChild( cell );
-       } // end for
- 
-       tbody.appendChild( row );
-    } // end for
- 
-    // register mousemove listener for the table
-    document.getElementById( "canvas" ).addEventListener( 
-       "mousemove", processMouseMove, false );
- } // end function createCanvas
- 
- // processes the onmousemove event
- function processMouseMove( e )
- {        
-    if ( e.target.tagName.toLowerCase() == "td" )
-    {
-       // turn the cell blue if the Ctrl key is pressed
-       if ( e.ctrlKey )
-       {
-          e.target.setAttribute( "class", "blue" );
-       } // end if
- 
-       // turn the cell red if the Shift key is pressed
-       if ( e.shiftKey )
-       {
-          e.target.setAttribute( "class", "red" );
-       } // end if
-    } // end if
- } // end function processMouseMove
- 
- window.addEventListener( "load", createCanvas, false );
+var helpArray = [ "Enter your name in this input box.",
+  "Enter your e-mail address in the format user@domain.",
+  "Check this box if you liked our site.",
+  "Enter any comments here that you'd like us to read.",
+  "This button submits the form to the server-side script.",
+  "This button clears the form.", "" ];
+var helpText;
+
+function init() {
+    helpText = document.getElementById("helpText");
+
+    register.Listeners(document.getElementById("name"), 0);
+    register.Listeners(document.getElementById("email"), 1);
+    register.Listeners(document.getElementById("like"), 2);
+    register.Listeners(document.getElementById("comments"), 3);
+    register.Listeners(document.getElementById("submit"), 4);
+    register.Listeners(document.getElementById("reset"), 5);
+
+}
+
+function registerListeners(object, messageNumber){
+    object.addEventListener("focus", function(){
+        helpText.innerHTML = helpArray[messageNumber];}, false);
+
+    object.addEventListener("blur", function(){
+        helpText.innerHTML = helpArray[6];}, false);
+}
+
+window.addEventListener("load", init, false);

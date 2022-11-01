@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 
-<!-- Fig. 13.3: draw.html -->
-<!-- A simple drawing program. -->
+
 <html>
    <head>
       <meta charset = "utf-8">
-      <title>Simple Drawing Program</title>
+      <title>A Form Using focus and blur</title>
       <link rel = "stylesheet" type = "text/css" href = "style.css">
-      <script src = "module.js"></script>
+      <script src = "focusblur.js"></script>
    </head>
    <body>
-      <table id = "canvas">
-         <caption>Hold <em>Ctrl</em> (or <em>Control</em>) to draw blue. 
-            Hold <em>Shift</em> to draw red.</caption>
-         <tbody id = "tablebody"></tbody>
-      </table>
+      <form id = "myForm" action = "">
+         <p><label class = "fixed" for = "name">Name:</label>
+            <input type = "text" id =  "name" 
+               placeholder = "Enter name"></p>
+         <p><label class = "fixed" for = "email">E-mail:</label>
+            <input type = "email" id = "email" 
+               placeholder = "Enter e-mail address"></p>
+         <p><label>Click here if you like this site 
+            <input type = "checkbox" id =  "like"></label></p>
+         <p><label for = "comments">Any comments?</p>
+         <textarea id =  "comments" 
+            placeholder = "Enter comments here"></textarea>
+         <p><input id = "submit" type = "submit"> 
+            <input id = "reset" type = "reset"></p>
+      </form>
+      <p id = "helpText"></p>
    </body>
 </html>
