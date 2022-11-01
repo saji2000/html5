@@ -1,7 +1,16 @@
-function start(){
-    var inputColor = prompt("Enter a color name for the background", "");
-    document.body.setAttribute("style", "background-color: " + inputColor);
+var seconds = 0;
 
-}
+// called when the page loads to begin the timer
+function startTimer() 
+{
+   window.setInterval( "updateTime()", 1000 );
+} // end function startTimer
 
-window.addEventListener("load", start, false);
+// called every 1000 ms to update the timer
+function updateTime()
+{
+   ++seconds;                
+   document.getElementById( "soFar" ).innerHTML = seconds;
+} // end function updateTime
+
+window.addEventListener( "load", startTimer, false );
