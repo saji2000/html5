@@ -9,12 +9,26 @@ var helpText;
 function init() {
     helpText = document.getElementById("helpText");
 
-    register.Listeners(document.getElementById("name"), 0);
-    register.Listeners(document.getElementById("email"), 1);
-    register.Listeners(document.getElementById("like"), 2);
-    register.Listeners(document.getElementById("comments"), 3);
-    register.Listeners(document.getElementById("submit"), 4);
-    register.Listeners(document.getElementById("reset"), 5);
+    registerListeners(document.getElementById("name"), 0);
+    registerListeners(document.getElementById("email"), 1);
+    registerListeners(document.getElementById("like"), 2);
+    registerListeners(document.getElementById("comments"), 3);
+    registerListeners(document.getElementById("submit"), 4);
+    registerListeners(document.getElementById("reset"), 5);
+
+    var myForm = document.getElementById( "myForm" );
+   myForm.addEventListener( "submit", 
+      function()
+      {                                                         
+         return confirm( "Are you sure you want to submit?" );  
+      }, // end anonymous function
+      false );
+   myForm.addEventListener( "reset", 
+      function()
+      {                                                         
+         return confirm( "Are you sure you want to reset?" );  
+      }, // end anonymous function
+      false );
 
 }
 
