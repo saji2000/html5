@@ -1,11 +1,16 @@
 function start(){
     var canvas = document.getElementById('drawRectangle');
     var context = canvas.getContext('2d');
-    context.fillStyle = 'yellow';
-    context.fillRect(5, 10, 200, 75);
-    context.strokeStyle = 'royalblue';
-    context.lineWidth = 6;
-    context.strokeRect(4, 9, 201, 76);
+    context.beginPath();
+    context.moveTo(10, 10);
+    context.lineTo(390, 10);
+    context.lineTo(390, 30);
+    context.lineTo(10, 30);
+    context.lineWidth = 10;
+    context.lineJoin = "bevel";
+    context.lineCap = "round";
+    context.strokeStyle = "purple";
+    context.stroke();
 }
 
 window.addEventListener("load", start, false);
