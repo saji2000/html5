@@ -1,21 +1,11 @@
-function documentClick(){
-    alert("You clicked in the document.");
+function start(){
+    var canvas = document.getElementById('drawRectangle');
+    var context = canvas.getContext('2d');
+    context.fillStyle = 'yellow';
+    context.fillRect(5, 10, 200, 75);
+    context.strokeStyle = 'royalblue';
+    context.lineWidth = 6;
+    context.strokeRect(4, 9, 201, 76);
 }
 
-function bubble(e){
-    alert("This will bubble");
-    e.cancelBubble = false;
-}
-
-function noBubble(){
-    alerty("this will not bubble");
-    e.cancelBubble = true;
-}
-
-function registerEvents(){
-    document.addEventListener("click", documentClick, false);
-    document.getElementById("bubble").addEventListener("click", bubble, false);
-    document.getElementById("noBubble").addEventListener("click", noBubble, false);
-}
-
-window.addEventListener("load", registerEvents, false);
+window.addEventListener("load", start, false);

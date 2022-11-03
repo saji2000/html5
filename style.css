@@ -4,3 +4,4 @@
 td      { width: 4px; height: 4px; margin: 0px; padding: 0px; }
 .blue   { background-color: blue; }
 .red    { background-color: red; } */
+canvas {border: 1px solid black}
