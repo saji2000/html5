@@ -1,19 +1,20 @@
 function start(){
     var canvas = document.getElementById('drawRectangle');
     var context = canvas.getContext('2d');
-    context.shadowBlur = 10;
-    context.shadowOffsetX = 15;
-    context.shadowOffsetY = 15;
-    context.shadowColor = "blue";
-    context.fillStyle = "cyan";
-    context.fillRect(25, 25, 200, 200);
-
-    context.shadowBlur = 20;
-    context.shadowOffsetX = -20;
-    context.shadowOffsetY = -20;
-    context.shadowColor = "gray";
-    context.fillStyle = "magenta";
-    context.fillRect(300, 25, 200, 200);
+    
+    context.beginPath();
+    context.moveTo(15, 5);
+    context.lineTo(95, 5);
+    context.quadraticCurveTo(105, 5, 105, 15);
+    context.lineTo(15, 105);
+    context.quadraticCurveTo(105, 105, 5, 95);
+    context.lineTo(5, 15);
+    context.quadraticCurveTo(5, 5, 15, 5);
+    context.closePath();
+    context.fillStyle = "yellow";
+    context.fill();context.strokeStyle = "blue";
+    context.lineWidth = 1;
+    context.stroke();
 }
 
 window.addEventListener("load", start, false);
