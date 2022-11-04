@@ -4,10 +4,11 @@ image.src = "./logo.png";
 function start(){
     var canvas = document.getElementById('drawRectangle');
     var context = canvas.getContext('2d');
-    var pattern = context.createPattern(image, "repeat");
-
-    context.rect(5, 5, 200, 200);
-    context.fillStyle = pattern;
+    context.translate(canvas.width / 2, canvas.height / 2);
+    context.scale(1, 3);
+    context.beginPath();
+    context.arc(0, 0, 30, 0, 2 * Math.PI, true);
+    context.fillStyle = "orange";
     context.fill();
 }
 
