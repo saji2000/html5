@@ -4,7 +4,11 @@ image.src = "./logo.png";
 function start(){
     var canvas = document.getElementById('drawRectangle');
     var context = canvas.getContext('2d');
-    context.drawImage(image, 0, 0, 175, 175);
+    var pattern = context.createPattern(image, "repeat");
+
+    context.rect(5, 5, 200, 200);
+    context.fillStyle = pattern;
+    context.fill();
 }
 
 window.addEventListener("load", start, false);
