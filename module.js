@@ -1,15 +1,18 @@
-var image = new Image();
-image.src = "./logo.png";
+var canvas = document.getElementById("drawRectangle");
+var context = canvas.getContext("2d")
 
-function start(){
-    var canvas = document.getElementById('drawRectangle');
-    var context = canvas.getContext('2d');
-    context.translate(canvas.width / 2, canvas.height / 2);
-    context.scale(1, 3);
-    context.beginPath();
-    context.arc(0, 0, 30, 0, 2 * Math.PI, true);
-    context.fillStyle = "orange";
-    context.fill();
+function startRotating()
+{
+context.translate(canvas.width / 2, canvas.height / 2);
+setInterval(rotate, 10);
 }
 
-window.addEventListener("load", start, false);
+function rotate() 
+{
+context.clearRect(-100, -100, 200, 200); 
+context.rotate(Math.PI / 360);
+context.fillStyle = "lime";
+context.fillRect(-50, -50, 100, 100);
+}
+
+window.addEventListener( "load", startRotating, false );
