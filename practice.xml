@@ -1,7 +1,16 @@
 <?xml version="1.0"?>
 
-<player>
-    <firstname>John</firstname>
-    <lastname>Doe</lastname>
+<!-- Article structured with xml -->
 
-</player>
+<article>
+    <title>
+        Simple XML
+    </title>
+    <date>
+        July 4, 2002
+    </date>
+    <author>
+        <firstname>John</firstname>
+        <lastname>Doe</lastname>
+    </author>
+</article>
