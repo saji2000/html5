@@ -1,43 +1,21 @@
 <?xml version = "1.0"?>
-<!-- Fig. 15.8: letter2.xml -->
-<!-- Business letter formatted with XML -->
 
-<!DOCTYPE letter SYSTEM "practice.dtd">
-
-<letter>
-   <contact type = "sender">
-      <address1>Box 12345</address1>
-      <address2>15 Any Ave.</address2>
-      <city>Othertown</city>
-      <state>Otherstate</state>
-      <zip>67890</zip>
-      <phone>555-4321</phone>
-      <flag gender = "F" />
-   </contact>
-
-   <contact type = "receiver">
-      <name>John Doe</name>
-      <address1>123 Main St.</address1>
-      <address2></address2>
-      <city>Anytown</city>
-      <state>Anystate</state>
-      <zip>12345</zip>
-      <phone>555-1234</phone>
-      <flag gender = "M" />
-   </contact>
-
-   <salutation>Dear Sir:</salutation>
-
-   <paragraph>It is our privilege to inform you about our new database
-      managed with XML. This new system allows you to reduce the 
-      load on your inventory list server by having the client machine
-      perform the work of sorting and filtering the data.
-   </paragraph>
-
-   <paragraph>Please visit our Web site for availability 
-      and pricing.
-   </paragraph>
-
-   <closing>Sincerely,</closing>
-   <signature>Ms. Jane Doe</signature>
-</letter>
+<!-- Fig. 15.9: book.xml -->
+<!-- Book list marked up as XML -->
+<deitel:books xmlns:deitel = "http://www.deitel.com/booklist">
+   <book>
+      <title>Visual Basic 2010 How to Program</title>
+   </book>
+   <book>
+      <title>Visual C# 2010 How to Program, 4/e</title>
+   </book>
+   <book>
+      <title>Java How to Program, 9/e</title>
+   </book>
+   <book>
+      <title>C++ How to Program, 8/e</title>
+   </book>
+   <book>
+      <title>Internet and World Wide Web How to Program, 5/e</title>
+   </book>
+</deitel:books>
