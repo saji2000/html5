@@ -2,22 +2,26 @@
 
 <!-- Fig. 15.10: book.xsd           -->
 <!-- Simple W3C XML Schema document -->
-<schema xmlns = "http://www.w3.org/2001/XMLSchema"    
-   xmlns:deitel = "http://www.deitel.com/booklist"    
-   targetNamespace = "http://www.deitel.com/booklist">
-
-   <element name = "books" type = "deitel:BooksType"/>
-
-   <complexType name = "BooksType">
-      <sequence>
-         <element name = "book" type = "deitel:SingleBookType"
-            minOccurs = "1" maxOccurs = "unbounded"/>         
-      </sequence>
-   </complexType>
-
-   <complexType name = "SingleBookType">
-      <sequence>
-         <element name = "title" type = "string"/>
-      </sequence>
-   </complexType>
+<schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns = "http://www.w3.org/2001/XMLSchema">
+   <element name="company">
+      <complexType>
+         <sequence>
+            <element name="executives" maxOccurs="3" minOccurs="1">
+               <complexType>
+                  <sequence>
+                     <element name="executive">
+                        <complexType>
+                           <sequence>
+                              <element name="firstname" type="string"/>
+                              <element name="lastname" type="string"/>
+                              <element name="salary" type="int"/>
+                           </sequence>
+                        </complexType>
+                     </element>
+                  </sequence>
+               </complexType>
+            </element>
+         </sequence>
+      </complexType>
+   </element>
 </schema>
