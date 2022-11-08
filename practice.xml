@@ -1,31 +1,31 @@
 <?xml version = "1.0"?>
+<?xml-stylesheet type = "text/xsl" href = "practice.xsl"?>
 
-<!-- Fig. 15.9: book.xml -->
-<!-- Book list marked up as XML -->
-<company>
-   <executives>
+<!-- Fig. 15.18: sports.xml -->
+<!-- Sports Database -->
 
-      <executive>
-         <firstname>Seyed Sajjad</firstname>
-         <lastname>Daneshmand</lastname>
-         <salary>50</salary>
-      </executive>
-      <executive>
-         <firstname>Seena</firstname>
-         <lastname>Ashrafpour</lastname>
-         <salary>40</salary>
-      </executive>
-   </executives>
-   <!-- <employees>
-      <employee>
-         <firstname>Iman</firstname>
-         <lastname>Naseri</lastname>
-         <salary>30</salary>
-      </employee>
-      <employee>
-         <firstname>Nargess</firstname>
-         <lastname>Dehghani</lastname>
-         <salary>30</salary>
-      </employee>
-   </employees> -->
-</company>
+<sports>
+   <game id = "783">
+      <name>Cricket</name>
+
+      <paragraph>
+         More popular among commonwealth nations.
+      </paragraph>
+   </game>
+
+   <game id = "239">
+      <name>Baseball</name>
+
+      <paragraph>
+         More popular in America.
+      </paragraph>
+   </game>
+
+   <game id = "418">
+      <name>Soccer (Futbol)</name>
+
+      <paragraph>
+         Most popular sport in the world.
+      </paragraph>
+   </game>
+</sports> 
