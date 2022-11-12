@@ -9,6 +9,7 @@ xmlns:xsl = "http://www.w3.org/1999/XSL/Transform">
 			
 			<table border = "1">
 				<tr bgcolor="lightgreen">
+					<th>id</th>
 					<th>Game Name</th>
 					<th>Description</th>
 				</tr>
@@ -16,6 +17,7 @@ xmlns:xsl = "http://www.w3.org/1999/XSL/Transform">
 				<xsl:for-each select = "game">
 				
 					<tr>
+						<td><xsl:value-of select = "@id"/></td>
 						<td><xsl:value-of select = "name"/></td>
 						<td><xsl:value-of select = "description"/></td>
 					</tr>
