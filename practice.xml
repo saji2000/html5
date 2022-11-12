@@ -1,19 +1,16 @@
 <?xml-stylesheet type = "text/xsl" href = "practice.xsl"?>
 
-<class>
-	<student>
-		<firstname>Graham</firstname>
-		<lastname>Bell</lastname>
-		<nickname>Garry</nickname>
-	</student>
-	<student>
-		<firstname>Albert</firstname>
-		<lastname>Einstein</lastname>
-		<nickname>Ally</nickname>
-	</student>
-	<student>
-		<firstname>Thomas</firstname>
-		<lastname>Edison</lastname>
-		<nickname>Eddy</nickname>
-	</student>
-</class>
+<sport>
+	<game id = "783">
+		<name>Football</name>
+		<description>Most popular</description>
+	</game>
+	<game id = "12">
+		<name>basketball</name>
+		<description>Played with hand</description>
+	</game>
+	<game id = "13">
+		<name>ufc</name>
+		<description>Martial Arts sports</description>
+	</game>
+</sport>
