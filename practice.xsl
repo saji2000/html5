@@ -10,12 +10,17 @@
    <html>
       <body>
          <h2>Student List</h2>
-         <table>
+         <table border = "1">
             <tr>
                <th>First Name </th>
                <th>Last Name </th>
                <th>Nick Name</th>
             </tr>
+            <xsl:for-each select = "student">
+               <tr>
+                  <td><xsl:value-of select = "firstname"/></td>
+               </tr>
+            </xsl:for-each>
          </table>
       </body>
    </html>
