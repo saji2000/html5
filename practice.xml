@@ -1,9 +1,19 @@
-<?xml-stylesheet type = "text/xsl" href="practice.xsl"?>
+<?xml-stylesheet type = "text/xsl" href = "practice.xsl"?>
 
 <class>
-   <student>
-      <firstname>Saj</firstname>
-      <lastname>DN</lastname>
-      <nickname>Saji</nickname>
-   </student>
+	<student>
+		<firstname>Graham</firstname>
+		<lastname>Bell</lastname>
+		<nickname>Garry</nickname>
+	</student>
+	<student>
+		<firstname>Albert</firstname>
+		<lastname>Einstein</lastname>
+		<nickname>Ally</nickname>
+	</student>
+	<student>
+		<firstname>Thomas</firstname>
+		<lastname>Edison</lastname>
+		<nickname>Eddy</nickname>
+	</student>
 </class>
