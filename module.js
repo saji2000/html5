@@ -43,7 +43,7 @@ function processXPathExpression()
    else // other browsers
    {
       result = doc.evaluate( xpathExpression, doc, null, 
-         XPathResult.ORDERED_NODE_ITERATOR_TYPE, null );
+        XPathResult.ORDERED_NODE_ITERATOR_TYPE, null );
       var current = result.iterateNext();
 
       while ( current ) 
