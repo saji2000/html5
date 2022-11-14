@@ -1,15 +1,18 @@
 var asyncRequest;
 var ids = ["cpp", "www"];
 
-
 function registerListeners() {
     var book;
-    for (var i = 0; i < ids.length; ++i){
-        book = document.getElementById(ids[i]);
-        book.addEventListener("mouseover", switchText(ids[i]), false);
-        book.addEventListener("mouseout", clearContent, false);
-    }
-    
+    // for (var i = 0; i < ids.size(); ++i){
+    book = document.getElementById(ids[0]);
+    book.addEventListener("mouseover", function(){ switchText(ids[0]);}, false);
+    book.addEventListener("mouseout", clearContent, false);
+
+    book = document.getElementById(ids[1]);
+    book.addEventListener("mouseover", function(){ switchText(ids[1]);}, false);
+    book.addEventListener("mouseout", clearContent, false);
+    // }
+    // console.log()
 }
 
 function switchText(name){
@@ -18,7 +21,7 @@ function switchText(name){
         asyncRequest = new XMLHttpRequest();
 
         asyncRequest.addEventListener("readystatechange", stateChange, false);
-        asyncRequest.open("GET", url, true);
+        asyncRequest.open("GET", name, true);
         asyncRequest.send(null);
     }
     catch(e){
