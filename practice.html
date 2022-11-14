@@ -7,12 +7,14 @@
    <meta charset = "utf-8">
    <link rel = "stylesheet" type = "text/css" href = "style.css">
    <script src = "module.js"></script>
-   <title>Using XPath</title>
+   <title>Different books</title>
 </head>
 <body>
-   <h1>Mouse over a book for more information.</h1>
-   <h3 id="cpp">C++ Book</h3>
-   <h3 id="www">Internet and WWW Book</h3>
-   <div class = "box" id = "contentArea"></div>
+   <h1>Choose an option for more info</h1>
+   <input type="radio" name="Books" value="all" id="all"> All books
+   <input type="radio" name="Books" value="simply" id="simply"> simply books
+   <input type="radio" name="Books" value="howto" id="howtos"> How to program books
+   <input type = "radio" checked name = "Books" value = "none" id = "none"> None 
+   <div class = "box" id = "covers"></div>
 </body>
 </html>
