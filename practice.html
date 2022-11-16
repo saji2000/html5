@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 
-<!-- Fig. 15.32: xpath.html -->
-<!-- Using XPath to locate nodes in an XML document. -->
+
+<!-- Fig. 16.9 addressbook.html -->
+<!-- Ajax enabled address book application. -->
 <html>
 <head>
-   <meta charset = "utf-8">
-   <link rel = "stylesheet" type = "text/css" href = "style.css">
+   <meta charset="utf-8">
+   <title>Address Book</title>
+   <link rel = "stylesheet" type = "text/css" href = "style.css"> 
    <script src = "module.js"></script>
-   <title>Different books</title>
 </head>
 <body>
-   <h1>Choose an option for more info</h1>
-   <input type="radio" name="Books" value="all" id="all"> All books
-   <input type="radio" name="Books" value="simply" id="simply"> simply books
-   <input type="radio" name="Books" value="howto" id="howtos"> How to program books
-   <input type = "radio" checked name = "Books" value = "none" id = "none"> None 
-   <div class = "box" id = "covers"></div>
+   <div>
+      <input id = "addressBookButton" type = "button" 
+         value = "Address Book">
+      <input id = "addEntryButton" type = "button" 
+         value = "Add an Entry">
+   </div>
+   <div id = "addressBook"">
+      <p>Search By Last Name: <input id = "searchInput"></p>
+      <div id = "Names"></div>
+   </div>
+   <div id = "addEntry" style = "display : none">
+      <p><label>First Name:</label> <input id = "first"></p>
+      <p><label>Last Name:</label> <input id = "last"></p>
+      <p class = "head">Address:</p> 
+      <p><label>Street:</label> <input id = "street"></p>
+      <p><label>City:</label> <span id = "city" class = "validator"></span></p>
+      <p><label>State:</label> <span id = "state" class = "validator"></span></p>
+      <p><label>Zip:</label> <input id = "zip">
+         <span id = "validateZip" class = "validator"></span></p>
+      <p><label>Telephone:</label> <input id = "phone">
+         <span id = "validatePhone" class = "validator"></span></p>
+      <p><input id = "submitButton" type = "button" value = "Submit"></p>
+      <div id = "success" class = "validator"></div>
+   </div>
 </body>
 </html>
