@@ -233,7 +233,7 @@ function showPhoneError( asyncRequest )
       } // end if
       else
       {
-         phoneValid = true; // update validity tracker
+         phoneValid = true; 
       } // end else
     } // end if
 } // end function showPhoneError
